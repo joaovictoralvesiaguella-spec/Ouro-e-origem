@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143a30">
+  <meta name="description" content="Portal educativo sobre garimpo regular, proteção ambiental e rastreabilidade do ouro. Projeto de extensão UNIFAMA.">
+  <title>Ouro & Origem · Informação e responsabilidade</title>
+  <style>
+  :root{--forest:#13382e;--forest2:#1d4c3f;--green:#356c53;--mint:#d9e5d6;--cream:#f7f4ec;--white:#fffdfa;--sand:#ece7da;--gold:#b58a40;--gold2:#d5b77c;--dark:#1b2722;--muted:#5c655d;--line:#e1dfd5;--radius:20px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased}button,input{font:inherit}a{color:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}::selection{background:#dccc9b;color:var(--forest)}
+  .container{max-width:1160px;margin:0 auto;padding:0 30px}.nav-wrap{position:relative;z-index:4;background:var(--forest);border-bottom:1px solid #ffffff23}.nav{display:flex;justify-content:space-between;align-items:center;min-height:86px;gap:20px}.brand{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.12em;font-size:14px}.brandmark{width:34px;height:34px;display:inline-grid;place-items:center;border:1px solid #d4b57280;border-radius:50%;color:#e4c993;font-size:21px}.nav-links{display:flex;gap:31px;align-items:center}.nav-links a{font-size:13px;color:#dde8dd;text-decoration:none}.nav-links a:hover{color:#e8ca83}.nav-pill{padding:10px 17px;border:1px solid #d6b7799c;border-radius:999px;color:#f2dab1!important}.menu-button{display:none;border:1px solid #ffffff58;border-radius:10px;background:transparent;color:white;padding:9px 13px;cursor:pointer}
+  .hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 78% 30%,#2b5f4b 0,#173f34 29%,#0e3228 73%);padding:66px 0 82px}.hero:after{content:"";position:absolute;bottom:-120px;left:-120px;width:410px;height:310px;border:1px solid #bfab6c22;border-radius:50%;pointer-events:none}.hero-grid{display:grid;grid-template-columns:1fr .87fr;align-items:center;gap:55px;min-height:440px}.eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;font-weight:800;text-transform:uppercase;color:var(--green)}.hero .eyebrow{color:var(--gold2)}h1,h2,h3,p{margin-top:0}h1,h2,.display{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}h1{font-size:clamp(45px,5.9vw,79px);line-height:1.05;margin:21px 0 24px;max-width:730px}h2{font-size:clamp(34px,4.2vw,54px);line-height:1.12;margin:12px 0 20px}h3{font-size:20px;line-height:1.25}.hero-description{color:#d4e3d8;max-width:610px;font-size:17px;line-height:1.78;margin-bottom:29px}.button-primary{display:inline-flex;align-items:center;gap:12px;background:#d3b67b;color:#1e3029;border:0;border-radius:4px;padding:14px 22px;text-decoration:none;font-weight:750;font-size:13px;cursor:pointer;transition:transform .2s,background .2s}.button-primary:hover{background:#e8cc91;transform:translateY(-2px)}.hero-meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px 20px;color:#b8cdbd;font-size:12px}.hero-meta span:before{content:"•";color:#dbc18b;margin-right:8px}.illustration{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center}.art-circle{width:100%;max-width:445px;aspect-ratio:1/1;position:relative;border-radius:50%;border:1px solid #bfbc8690;background:radial-gradient(circle at 50% 42%,#386452 0,#214f40 40%,#174337 65%,#133b30 100%);box-shadow:0 35px 80px #001b1477,inset 0 0 0 20px #ffffff05}.art-circle svg{width:100%;height:100%;display:block}.art-caption{position:absolute;bottom:30px;right:0;padding:18px 23px;background:#f7f3e6;color:var(--forest);width:220px;box-shadow:0 15px 33px #001c1440}.art-caption span{display:block;text-transform:uppercase;letter-spacing:.15em;font-size:9px;font-weight:800;color:#866a37}.art-caption strong{display:block;font-family:Georgia,serif;font-weight:500;font-size:22px;line-height:1.12;margin-top:5px}
+  .section{padding:95px 0}.section-intro{max-width:770px;margin-bottom:42px}.section-intro p{color:var(--muted);font-size:17px;line-height:1.8}.section-alt{background:#eeeee6}.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid #d9d7c9}.highlight{padding:35px 30px 37px;border-right:1px solid #d9d7c9}.highlight:first-child{padding-left:0}.highlight:last-child{border-right:0}.highlight-number{font-size:11px;color:#897443;letter-spacing:.18em;font-weight:800}.highlight h3{font-family:Georgia,serif;font-size:25px;font-weight:500;margin:10px 0 5px}.highlight p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}.section-heading-row{display:flex;gap:35px;align-items:flex-end;justify-content:space-between;margin-bottom:44px}.section-heading-row .section-intro{margin:0}.section-tag{border:1px solid #cad6c8;border-radius:30px;padding:8px 13px;font-size:11px;color:var(--green);white-space:nowrap}
+  .topic-stack{display:grid;gap:22px}.topic{background:#fffefa;border:1px solid #e0dfd5;border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:36% 1fr;box-shadow:0 3px 12px #133a3020}.topic-left{padding:36px;background:#e6ebe1;display:flex;flex-direction:column;justify-content:space-between}.topic:nth-child(2) .topic-left{background:#eae2d0}.topic:nth-child(3) .topic-left{background:#dfe7e5}.topic-left .eyebrow{font-size:10px}.topic-left h3{font-family:Georgia,serif;font-size:34px;line-height:1.16;font-weight:500;margin:26px 0 20px}.topic-left p{margin:0;color:#3e5a4d;font-size:14px;line-height:1.7}.topic-right{padding:34px 40px}.topic-point{padding:15px 0;border-bottom:1px solid var(--line)}.topic-point:first-child{padding-top:0}.topic-point:last-of-type{border-bottom:0}.topic-point strong{font-size:14px;color:var(--forest)}.topic-point p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.7}.takeaway{margin-top:14px;padding:15px 16px;background:#f2f3ed;border-left:3px solid var(--gold);font-size:12px;color:#405d4b;line-height:1.6}
+  .chain-head{max-width:640px}.chain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:36px}.chain-card{padding:25px 23px 28px;border-radius:16px;border:1px solid #dadccf;background:#fffefa;min-height:222px}.chain-count{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid #b3a478;color:#857040;font-size:12px;font-weight:800;margin-bottom:28px}.chain-card h3{font-family:Georgia,serif;font-weight:500;font-size:21px;margin-bottom:10px}.chain-card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}.legal{background:#163d33;color:#fff;position:relative;overflow:hidden}.legal:before{content:"";position:absolute;top:-150px;right:-90px;border:1px solid #bdaa7547;border-radius:50%;width:480px;height:480px;box-shadow:0 0 0 65px #c9b78a0a,0 0 0 130px #c9b78a08;pointer-events:none}.legal-grid{display:grid;grid-template-columns:.9fr 1fr;gap:85px;align-items:start;position:relative}.legal .eyebrow{color:var(--gold2)}.legal h2{max-width:510px}.legal-text{font-size:17px;color:#dbe6df;line-height:1.8}.legal-note{background:#ffffff10;border:1px solid #ffffff25;border-radius:12px;padding:19px 23px;color:#cbdcd1;font-size:13px;margin-top:23px}.legal-note:before{content:"IMPORTANTE";display:block;color:#e3c78b;font-size:10px;letter-spacing:.14em;font-weight:800;margin-bottom:8px}
+  .faq-wrap{max-width:875px}.faq-list{border-top:1px solid #d7d9ce}.faq-item{border-bottom:1px solid #d7d9ce}.faq-item summary{cursor:pointer;list-style:none;padding:21px 5px;font-weight:650;display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:15px}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::after{content:"+";color:var(--green);font-size:24px;font-weight:400;line-height:1}.faq-item[open] summary::after{content:"–"}.faq-item p{color:var(--muted);font-size:14px;max-width:760px;padding:0 5px 23px;margin:0}
+  .quiz-section{background:#ede8dd}.quiz-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:65px;align-items:start}.quiz-side .eyebrow{color:#856a3d}.quiz-side p{color:var(--muted);font-size:16px}.quiz-card{background:#fffefa;padding:35px;border:1px solid #e5e0d5;border-radius:18px;box-shadow:0 14px 40px #382f1710;min-height:340px}.quiz-progress{color:#7c8a7d;font-size:11px;font-weight:750;letter-spacing:.14em;margin-bottom:15px}.quiz-card h3{font-family:Georgia,serif;font-size:25px;font-weight:500;margin-bottom:25px;line-height:1.35}.quiz-choices{display:grid;gap:9px}.quiz-choice{text-align:left;width:100%;background:#f7f6f1;color:#283f35;border:1px solid #e1e3dc;padding:13px 16px;border-radius:9px;cursor:pointer;font-size:13px;line-height:1.5}.quiz-choice:hover:not(:disabled){border-color:#8ba78e;background:#f0f5ec}.quiz-choice:disabled{cursor:default}.quiz-choice.correct{border-color:#428062;background:#e1f1e2;color:#174f32}.quiz-choice.incorrect{border-color:#ad7367;background:#f4e5e1}.quiz-explanation{font-size:13px;color:#425a49;background:#f1f5ed;padding:15px 17px;border-radius:8px;margin:18px 0 0}.quiz-action{margin-top:19px}.quiz-action button{border:0;border-radius:8px;background:var(--forest);color:#fff;padding:12px 21px;cursor:pointer;font-size:12px;font-weight:750}.quiz-result-number{color:var(--green);font-family:Georgia,serif;font-size:73px;line-height:1.1;margin:18px 0 10px}.quiz-footnote{font-size:11px;color:#67736b;margin-top:15px}
+  .sources-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.source-card{display:flex;text-decoration:none;align-items:center;gap:16px;border:1px solid #dedfd3;padding:19px 21px;border-radius:12px;background:#fffefa;transition:border-color .2s,transform .2s}.source-card:hover{border-color:#8aa18b;transform:translateY(-2px)}.source-card div{flex:1}.source-card strong{display:block;font-size:13px;color:#214737}.source-card p{font-size:12px;color:var(--muted);line-height:1.5;margin:3px 0 0}.source-card .arrow{color:#897342;font-size:19px}
+  .closing{background:#e3e9dd;padding:80px 0}.closing-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.closing h2{max-width:600px}.closing p{color:var(--muted);font-size:16px}.closing-figure{position:relative;min-height:200px;border:1px solid #bacbb8;border-radius:150px;display:grid;place-items:center;color:#3f6c56}.closing-figure:before{content:"";width:180px;height:180px;border-radius:50%;border:1px solid #b7ba8d;position:absolute}.closing-figure span{font-family:Georgia,serif;font-size:45px;color:#a98a51}.footer{background:#102e26;color:#cadacb;padding:48px 0 28px}.footer-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:70px}.footer .brand{margin-bottom:12px}.footer p{font-size:12px;line-height:1.75;color:#b6c6b8}.footer h4{font-size:11px;letter-spacing:.15em;color:#e9d4a5;text-transform:uppercase;margin:4px 0 9px}.footer a{color:#e8d49d;text-decoration:none}.footer a:hover{text-decoration:underline}.foot-bottom{border-top:1px solid #ffffff2b;margin-top:35px;padding-top:17px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px;color:#9eb7a4}.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:10;background:white;padding:10px}.noscript{margin:20px auto;padding:20px;background:#fff}
+  @media (max-width:950px){.hero-grid{grid-template-columns:1fr .76fr;gap:20px}.illustration{min-height:350px}.art-circle{max-width:350px}.art-caption{right:-4px;bottom:0}.chain-grid{grid-template-columns:repeat(2,1fr)}.legal-grid{gap:45px}.quiz-layout{gap:30px}}
+  @media (max-width:700px){.container{padding:0 21px}.nav{min-height:70px}.brand{font-size:12px}.menu-button{display:block}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#174437;padding:17px 22px 23px;flex-direction:column;align-items:stretch;gap:15px;box-shadow:0 15px 35px #07251e85}.nav-links.open{display:flex}.hero{padding:50px 0 55px}.hero-grid{grid-template-columns:1fr;min-height:auto}.hero h1{font-size:50px;max-width:600px}.hero-description{font-size:15px}.illustration{min-height:310px;margin-top:15px}.art-circle{max-width:315px}.art-caption{bottom:-12px;right:3px;padding:13px 18px;width:180px}.art-caption strong{font-size:18px}.section{padding:70px 0}h2{font-size:39px}.highlights{grid-template-columns:1fr}.highlight{padding:18px 0;border-right:0;border-bottom:1px solid #d9d7c9}.highlight:last-child{border-bottom:0}.section-heading-row{display:block}.section-tag{display:none}.topic{grid-template-columns:1fr}.topic-left{padding:29px}.topic-left h3{font-size:29px;margin:13px 0}.topic-right{padding:23px 28px}.chain-grid{grid-template-columns:1fr 1fr;gap:10px}.chain-card{padding:20px;min-height:200px}.legal-grid,.quiz-layout,.closing-grid,.footer-cols{grid-template-columns:1fr;gap:27px}.legal .section{padding:70px 0}.quiz-card{padding:24px}.sources-grid{grid-template-columns:1fr}.closing-figure{min-height:160px}.closing-figure:before{width:130px;height:130px}.foot-bottom{flex-direction:column;align-items:flex-start}.section-intro p{font-size:15px}}
+  @media(max-width:390px){.hero h1{font-size:43px}.chain-grid{grid-template-columns:1fr}.chain-card{min-height:0}.art-circle{max-width:270px}.illustration{min-height:265px}}
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="nav-wrap"><div class="container nav"><a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="brandmark">◇</span><span id="brand-name">OURO & ORIGEM</span></a><button type="button" id="menu-button" class="menu-button" aria-label="Abrir menu" aria-expanded="false">☰ Menu</button><nav class="nav-links" id="nav-links" aria-label="Navegação principal"><a href="#entenda">Entenda</a><a href="#responsabilidades">Responsabilidades</a><a href="#perguntas">Perguntas</a><a href="#fontes" class="nav-pill">Fontes oficiais ↗</a></nav></div></header>
+<main id="conteudo">
+<section class="hero" id="inicio"><div class="container hero-grid"><div><div class="eyebrow" id="small-label"></div><h1 id="hero-headline"></h1><p class="hero-description" id="hero-text"></p><a href="#entenda" class="button-primary" id="hero-button"></a><div class="hero-meta"><span id="hero-location"></span><span id="hero-year"></span><span>Informação sem cadastro</span></div></div><div class="illustration" aria-hidden="true"><div class="art-circle">
+<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="roundClip"><circle cx="220" cy="220" r="215"/></clipPath><linearGradient id="river" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#91aaa1"/><stop offset="1" stop-color="#547f77"/></linearGradient><linearGradient id="ore" x1="0" y1="0" x2=".6" y2="1"><stop stop-color="#f4db96"/><stop offset=".45" stop-color="#c69c54"/><stop offset="1" stop-color="#846431"/></linearGradient></defs><g clip-path="url(#roundClip)"><circle cx="220" cy="220" r="215" fill="#2e5b4b"/><path d="M-60 230 Q88 109 238 181T502 123" fill="none" stroke="#9ac0a4" stroke-width="1.2" opacity=".17"/><path d="M-40 257 Q115 130 262 202T497 141" fill="none" stroke="#9ac0a4" stroke-width="1.2" opacity=".17"/><path d="M-40 285 Q116 160 262 231T497 170" fill="none" stroke="#9ac0a4" stroke-width="1.2" opacity=".17"/><path d="M-10 310 Q75 264 120 317T247 322T410 301T489 337" fill="none" stroke="#628e83" stroke-width="70" opacity=".3"/><path d="M-18 330 Q78 280 133 328T258 336T408 312T505 339" fill="none" stroke="url(#river)" stroke-width="24" opacity=".7"/><path d="M-18 345 Q80 293 128 345T256 351T414 325T505 358" fill="none" stroke="#b3d4bd" stroke-width="2" opacity=".5"/><g stroke="#74a48b" stroke-width="1.4" opacity=".8" fill="none"><path d="M48 115l13-30 13 30M61 87v50M101 131l14-43 14 43M115 95v57M337 119l13-41 13 41M350 87v59M383 149l15-48 15 48M398 118v56"/><path d="M18 233l18-40 18 40M36 202v55M375 246l17-43 17 43M392 208v57"/></g><path d="M154 169l86-63 80 64-5 95-75 42-82-45z" fill="#2c5847" stroke="#bbad7e" stroke-width="2"/><path d="M240 106l38 68-38 130-85-136z" fill="url(#ore)"/><path d="M240 106l80 64-42 4z" fill="#f0d58f"/><path d="M155 168l85 136-83-42z" fill="#8e713c"/><path d="M278 174l42-4-5 95-75 39z" fill="#b08b48"/><path d="M240 106l-4 198M155 168l123 6M240 304l-22-130" stroke="#ead9a3" stroke-width="1.5" opacity=".65" fill="none"/><circle cx="219" cy="204" r="125" stroke="#dfcb9073" stroke-width="1" stroke-dasharray="2 9" fill="none"/><path d="M140 60h37M158 43v36M304 346h40M324 327v37" stroke="#e5d2a0" stroke-width="1" opacity=".6"/></g></svg>
+</div><div class="art-caption"><span>Da origem ao destino</span><strong>Um compromisso com a informação.</strong></div></div></div></section>
+<section class="container" aria-label="Três temas centrais"><div id="highlights" class="highlights"></div></section>
+<section class="section" id="entenda"><div class="container"><div class="section-heading-row"><div class="section-intro"><span class="eyebrow" id="intro-eyebrow"></span><h2 id="intro-title"></h2><p id="intro-text"></p></div><span class="section-tag">Guia de leitura · 3 temas</span></div><div id="topic-stack" class="topic-stack"></div></div></section>
+<section class="section section-alt" id="responsabilidades"><div class="container"><div class="chain-head"><span class="eyebrow" id="chain-eyebrow"></span><h2 id="chain-title"></h2></div><div class="chain-grid" id="chain-grid"></div></div></section>
+<section class="section legal"><div class="container legal-grid"><div><span class="eyebrow" id="decision-eyebrow"></span><h2 id="decision-title"></h2></div><div><p class="legal-text" id="decision-text"></p><div class="legal-note" id="decision-caution"></div><a href="#fontes" style="display:inline-block;margin-top:22px;color:#efd6a0;text-underline-offset:4px;font-size:13px">Consultar fontes oficiais ↗</a></div></div></section>
+<section class="section" id="perguntas"><div class="container faq-wrap"><div class="section-intro"><span class="eyebrow">DÚVIDAS FREQUENTES</span><h2>Perguntas que merecem respostas claras.</h2><p>Abra cada pergunta para ler a explicação.</p></div><div id="faq-list" class="faq-list"></div></div></section>
+<section class="section quiz-section" id="quiz"><div class="container quiz-layout"><div class="quiz-side"><span class="eyebrow" id="quiz-eyebrow"></span><h2 id="quiz-title"></h2><p id="quiz-intro"></p><div style="border-top:1px solid #d2cabc;margin-top:30px;padding-top:15px;font-size:12px;color:#768073">✓ Sem login &nbsp;&nbsp; ✓ Sem coleta de respostas</div></div><div id="quiz-card" class="quiz-card" aria-live="polite"></div></div></section>
+<section class="section" id="fontes"><div class="container"><div class="section-intro"><span class="eyebrow" id="sources-eyebrow"></span><h2 id="sources-title"></h2><p id="sources-text"></p></div><div id="sources-grid" class="sources-grid"></div></div></section>
+<section class="closing"><div class="container closing-grid"><div><span class="eyebrow">CONHECIMENTO PARA A COMUNIDADE</span><h2 id="closing-title"></h2><p id="closing-text"></p></div><div class="closing-figure" aria-hidden="true"><span>◇</span></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-cols"><div><a href="#inicio" class="brand"><span class="brandmark">◇</span><span id="footer-brand"></span></a><p id="footer-study"></p><p id="footer-credit"></p></div><div><h4>Nota de responsabilidade</h4><p id="footer-disclaimer"></p><p>Informações verificadas para a edição de <strong id="updated-date"></strong>.</p></div></div><div class="foot-bottom"><span>Projeto de extensão · <span id="foot-year"></span> · UNIFAMA</span><span>Educação ambiental e informação jurídica acessível</span></div></div></footer>
+<noscript><div class="container noscript">Para navegar pelas informações e responder ao questionário, ative o JavaScript do seu navegador.</div></noscript>
+<script id="content-data" type="application/json">{
+  "project": {
+    "brand": "OURO & ORIGEM",
+    "smallLabel": "Projeto de extensão · Direito · UNIFAMA",
+    "headline": "O ouro tem uma história. A origem faz parte dela.",
+    "heroText": "Entenda por que a regularização da extração, os cuidados ambientais e a identificação da origem do ouro são importantes para quem trabalha com a atividade garimpeira e para toda a comunidade.",
+    "heroButton": "Conheça os principais pontos",
+    "location": "Peixoto de Azevedo · Mato Grosso",
+    "year": "2026",
+    "studyTitle": "Fiscalização Ambiental do Garimpo Ilegal: Limites e Desafios do Poder Público",
+    "updateDate": "19 de outubro de 2026",
+    "closingTitle": "Informação também é uma forma de cuidado.",
+    "closingText": "Este portal foi preparado como parte de uma ação educativa de extensão universitária. O objetivo é informar, incentivar práticas responsáveis e aproximar a pesquisa acadêmica da comunidade.",
+    "disclaimer": "Conteúdo educativo. Não substitui orientação jurídica, técnica ou ambiental especializada. Regras e procedimentos podem ser atualizados: consulte os órgãos competentes.",
+    "credit": "Material acadêmico de estudantes do curso de Direito da UNIFAMA. Uso educativo, sem caráter de fiscalização."
+  },
+  "highlights": [
+    {
+      "number": "01",
+      "title": "Regularização",
+      "text": "Conhecer os títulos e as autorizações exigidos para a atividade."
+    },
+    {
+      "number": "02",
+      "title": "Proteção ambiental",
+      "text": "Compreender os riscos da extração irregular para rios, florestas e pessoas."
+    },
+    {
+      "number": "03",
+      "title": "Origem do ouro",
+      "text": "Entender a importância dos registros e da rastreabilidade na comercialização."
+    }
+  ],
+  "intro": {
+    "eyebrow": "A QUESTÃO CENTRAL",
+    "title": "Não é apenas sobre extrair ouro. É sobre como ele chega ao mercado.",
+    "text": "A exploração mineral possui relevância econômica em diferentes regiões. O desafio é diferenciar as atividades regulares das práticas ilegais e fortalecer o controle ao longo de toda a cadeia: da extração à comercialização."
+  },
+  "topics": [
+    {
+      "eyebrow": "01 / REGULARIZAÇÃO",
+      "title": "O que torna um garimpo regular?",
+      "lead": "A atividade precisa cumprir as exigências minerárias e ambientais aplicáveis. Estar vinculado a uma cooperativa, por si só, não torna uma lavra regular.",
+      "items": [
+        {
+          "title": "Título minerário",
+          "text": "A Permissão de Lavra Garimpeira (PLG) é um dos regimes previstos para a exploração de substâncias minerais garimpáveis. As condições dependem da situação concreta."
+        },
+        {
+          "title": "Licenciamento ambiental",
+          "text": "Segundo a ANM, a outorga da PLG está condicionada à apresentação da licença ambiental expedida pelo órgão competente."
+        },
+        {
+          "title": "Respeito às áreas protegidas",
+          "text": "A existência de um pedido ou vínculo com cooperativa não autoriza, por si só, a exploração em áreas onde a atividade é proibida ou depende de requisitos específicos."
+        }
+      ],
+      "takeaway": "Cooperativas podem ter papel importante na organização da atividade, mas a regularidade deve ser verificada conforme os títulos, as licenças e as normas aplicáveis."
+    },
+    {
+      "eyebrow": "02 / IMPACTOS",
+      "title": "Quais danos a exploração ilegal pode causar?",
+      "lead": "Os efeitos não ficam restritos ao local de extração. Eles podem atingir a água, a vegetação, a saúde e os modos de vida de comunidades próximas.",
+      "items": [
+        {
+          "title": "Rios e águas",
+          "text": "A movimentação de sedimentos e o uso inadequado de substâncias como o mercúrio podem comprometer os ambientes aquáticos e representar riscos à saúde."
+        },
+        {
+          "title": "Floresta e biodiversidade",
+          "text": "A abertura irregular de áreas e o uso de maquinário podem intensificar o desmatamento e a perda de habitats."
+        },
+        {
+          "title": "Comunidades atingidas",
+          "text": "A degradação ambiental prejudica atividades como pesca, abastecimento de água e formas tradicionais de subsistência."
+        }
+      ],
+      "takeaway": "Fiscalizar e prevenir danos ambientais é uma responsabilidade pública, mas conhecer esses impactos também ajuda a sociedade a cobrar boas práticas."
+    },
+    {
+      "eyebrow": "03 / RASTREABILIDADE",
+      "title": "Por que a origem do ouro importa?",
+      "lead": "Os registros da cadeia de comercialização ajudam a distinguir o minério de origem regular daquele extraído em desacordo com a lei.",
+      "items": [
+        {
+          "title": "Documentação de origem",
+          "text": "Informações e documentos adequados tornam possível conferir de onde veio o ouro e quais operações foram realizadas."
+        },
+        {
+          "title": "Nota fiscal específica",
+          "text": "A Nota Fiscal Eletrônica de Ouro Ativo Financeiro se aplica às operações abrangidas por essa modalidade. Nem toda negociação de ouro segue exatamente o mesmo regime fiscal."
+        },
+        {
+          "title": "Decisão do STF",
+          "text": "Em março de 2025, o Supremo Tribunal Federal declarou inconstitucional a regra que presumia a legalidade do ouro e a boa-fé da pessoa jurídica adquirente (ADIs 7273 e 7345)."
+        }
+      ],
+      "takeaway": "A rastreabilidade não substitui a fiscalização ambiental em campo, mas pode fortalecer o controle da origem do minério e dificultar a comercialização irregular."
+    }
+  ],
+  "chain": {
+    "eyebrow": "DA EXTRAÇÃO À COMPRA",
+    "title": "Uma cadeia, responsabilidades diferentes",
+    "steps": [
+      {
+        "label": "Extração",
+        "text": "Verificar títulos, licenças e condições ambientais aplicáveis à área e à atividade."
+      },
+      {
+        "label": "Organização coletiva",
+        "text": "Cooperativas podem orientar cooperados e apoiar práticas organizadas, sem dispensar autorizações legais."
+      },
+      {
+        "label": "Comercialização",
+        "text": "Conhecer as regras da operação e a documentação exigida para identificar a origem do ouro."
+      },
+      {
+        "label": "Poder Público",
+        "text": "Órgãos minerários, ambientais e fiscais possuem atribuições distintas e complementares."
+      }
+    ]
+  },
+  "decision": {
+    "eyebrow": "DIREITO E FISCALIZAÇÃO",
+    "title": "O que mudou no controle da compra de ouro?",
+    "text": "No julgamento das ADIs 7273 e 7345, concluído em março de 2025, o STF declarou inconstitucional o § 4º do art. 39 da Lei nº 12.844/2013. A regra estabelecia presunção de legalidade do ouro adquirido e de boa-fé da pessoa jurídica compradora. O Tribunal também determinou a adoção de medidas para fortalecer a verificação da origem legal do minério.",
+    "caution": "A decisão não significa que toda compra de ouro seja ilegal. Ela reforça a necessidade de verificação da origem e de observância das regras pertinentes."
+  },
+  "faqs": [
+    {
+      "question": "Todo garimpo é ilegal?",
+      "answer": "Não. Existem regimes legais para a exploração garimpeira. A regularidade depende do cumprimento das exigências minerárias, ambientais e demais regras aplicáveis."
+    },
+    {
+      "question": "Ser cooperado significa que a atividade está regular?",
+      "answer": "Não necessariamente. A organização cooperativa não substitui o título minerário ou as licenças exigidas para a extração."
+    },
+    {
+      "question": "Toda compra de ouro exige a mesma nota fiscal?",
+      "answer": "Não. O documento e o regime tributário aplicáveis dependem do enquadramento jurídico da operação. A NF-e Ouro Ativo Financeiro é específica para as operações abrangidas por essa modalidade. Consulte a Receita Federal para detalhes."
+    },
+    {
+      "question": "A decisão do STF proibiu a compra de ouro?",
+      "answer": "Não. O julgamento afastou uma presunção legal de boa-fé e de legalidade; não proibiu de maneira geral o comércio regular do minério."
+    },
+    {
+      "question": "Como obter informações oficiais ou comunicar um dano ambiental?",
+      "answer": "A ANM oferece orientações sobre títulos minerários. O Ibama mantém canais oficiais de informações e denúncias ambientais, incluindo a Linha Verde 0800 061 8080."
+    }
+  ],
+  "quizIntro": {
+    "eyebrow": "APRENDA NA PRÁTICA",
+    "title": "Teste seus conhecimentos",
+    "text": "Cinco perguntas rápidas. As respostas são exibidas no próprio aparelho, sem cadastro e sem envio de dados."
+  },
+  "quiz": [
+    {
+      "question": "Todo garimpo é necessariamente ilegal?",
+      "choices": [
+        "Sim, sempre.",
+        "Não. A regularidade depende do cumprimento das exigências legais.",
+        "Somente quando existe uma cooperativa."
+      ],
+      "answer": 1,
+      "explanation": "Há atividades garimpeiras previstas na legislação; a regularidade depende de títulos, licenças e demais exigências."
+    },
+    {
+      "question": "O vínculo com uma cooperativa substitui a licença ambiental?",
+      "choices": [
+        "Sim.",
+        "Apenas em áreas rurais.",
+        "Não. A licença pode continuar sendo exigida."
+      ],
+      "answer": 2,
+      "explanation": "A participação em cooperativa não substitui as autorizações necessárias para a atividade."
+    },
+    {
+      "question": "Por que é importante saber a origem do ouro?",
+      "choices": [
+        "Para ajudar a verificar a regularidade da cadeia de comercialização.",
+        "Somente para definir a cor do produto.",
+        "Porque não existem regras para o comércio de ouro."
+      ],
+      "answer": 0,
+      "explanation": "A identificação da origem ajuda o controle e a distinção entre minério regular e irregular."
+    },
+    {
+      "question": "O que o STF decidiu em 2025 sobre a presunção legal de boa-fé na aquisição de ouro?",
+      "choices": [
+        "Que toda compra de ouro está proibida.",
+        "Que o § 4º do art. 39 da Lei 12.844/2013 era inconstitucional.",
+        "Que cooperativas estão dispensadas de fiscalização."
+      ],
+      "answer": 1,
+      "explanation": "O STF invalidou o dispositivo que presumia a legalidade do ouro e a boa-fé da pessoa jurídica adquirente."
+    },
+    {
+      "question": "Qual atitude contribui para uma cadeia de comercialização mais responsável?",
+      "choices": [
+        "Ignorar a origem informada.",
+        "Substituir documentos por declarações informais.",
+        "Conhecer e respeitar as exigências de documentação e rastreabilidade."
+      ],
+      "answer": 2,
+      "explanation": "Cumprir as regras aplicáveis e manter informações confiáveis sobre a origem ajuda a fortalecer o controle."
+    }
+  ],
+  "sourceIntro": {
+    "eyebrow": "FONTES DE CONFIANÇA",
+    "title": "Quer se aprofundar?",
+    "text": "Reunimos referências de órgãos públicos. Consulte os links para verificar informações e acompanhar eventuais mudanças nas regras."
+  },
+  "sources": [
+    {
+      "name": "ANM · Orientações da PLG",
+      "description": "Requisitos e orientações oficiais sobre a Permissão de Lavra Garimpeira.",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/exploracao-mineral/permissao-de-lavra-garimpeira/orientacoes"
+    },
+    {
+      "name": "ANM · O que é PLG?",
+      "description": "Características do regime de Permissão de Lavra Garimpeira.",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/exploracao-mineral/permissao-de-lavra-garimpeira/capa"
+    },
+    {
+      "name": "STF · Julgamento de 2025",
+      "description": "Decisão sobre presunção de boa-fé na compra de ouro.",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-invalida-norma-que-estabelecia-presuncao-de-boa-fe-no-comercio-de-ouro/"
+    },
+    {
+      "name": "Receita Federal · NF-e Ouro Ativo Financeiro",
+      "description": "Informações oficiais sobre documentos fiscais nessa modalidade.",
+      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/empresas-e-negocios/dfe/nfeouro/nfeo"
+    },
+    {
+      "name": "Ibama · Fiscalização e denúncias",
+      "description": "Como obter informações e comunicar infrações ambientais aos órgãos competentes.",
+      "url": "https://www.gov.br/ibama/pt-br/assuntos/fiscalizacao-e-protecao-ambiental/fiscalizacao-ambiental/denuncias"
+    },
+    {
+      "name": "ANM · Atualizações do regime de PLG",
+      "description": "Notícia de 2026 sobre alterações nas regras de permissão de lavra.",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/nova-resolucao-combate-fragilidades-estruturais-de-plgs/"
+    }
+  ]
+}</script>
+<script>
+(()=>{'use strict';
+const data=JSON.parse(document.getElementById('content-data').textContent);
+const $=id=>document.getElementById(id);
+function text(id,value){const el=$(id);if(el)el.textContent=value??''}
+function node(tag,cls,content){const x=document.createElement(tag);if(cls)x.className=cls;if(content!==undefined)x.textContent=content;return x}
+function add(parent,...children){children.forEach(child=>parent.appendChild(child));return parent}
+function linkValid(s){try{const u=new URL(s);return u.protocol==='https:'?u.href:'#'}catch{return '#'}}
+const p=data.project;
+text('brand-name',p.brand);text('small-label',p.smallLabel);text('hero-headline',p.headline);text('hero-text',p.heroText);text('hero-button',p.heroButton+'  ↗');text('hero-location',p.location);text('hero-year',p.year);
+text('footer-brand',p.brand);text('footer-study',p.studyTitle);text('footer-credit',p.credit);text('footer-disclaimer',p.disclaimer);text('updated-date',p.updateDate);text('foot-year',p.year);text('closing-title',p.closingTitle);text('closing-text',p.closingText);
+text('intro-eyebrow',data.intro.eyebrow);text('intro-title',data.intro.title);text('intro-text',data.intro.text);
+for(const h of data.highlights){const div=node('div','highlight');add(div,node('div','highlight-number',h.number),node('h3','',h.title),node('p','',h.text));$('highlights').appendChild(div)}
+for(const t of data.topics){const item=node('article','topic'),left=node('div','topic-left'),right=node('div','topic-right');add(left,node('div','eyebrow',t.eyebrow),node('h3','',t.title),node('p','',t.lead));for(const b of t.items){const point=node('div','topic-point');add(point,node('strong','',b.title),node('p','',b.text));right.appendChild(point)}right.appendChild(node('div','takeaway',t.takeaway));add(item,left,right);$('topic-stack').appendChild(item)}
+text('chain-eyebrow',data.chain.eyebrow);text('chain-title',data.chain.title);
+for(const [i,s] of data.chain.steps.entries()){const x=node('article','chain-card');add(x,node('div','chain-count',String(i+1).padStart(2,'0')),node('h3','',s.label),node('p','',s.text));$('chain-grid').appendChild(x)}
+text('decision-eyebrow',data.decision.eyebrow);text('decision-title',data.decision.title);text('decision-text',data.decision.text);text('decision-caution',data.decision.caution);
+for(const f of data.faqs){const d=node('details','faq-item'),s=node('summary','',f.question);add(d,s,node('p','',f.answer));$('faq-list').appendChild(d)}
+text('quiz-eyebrow',data.quizIntro.eyebrow);text('quiz-title',data.quizIntro.title);text('quiz-intro',data.quizIntro.text);
+let qIndex=0,score=0,selected=-1;const quizRoot=$('quiz-card');
+function drawQuiz(){quizRoot.replaceChildren();if(qIndex>=data.quiz.length){add(quizRoot,node('div','quiz-progress','QUESTIONÁRIO CONCLUÍDO'),node('h3','','Obrigado por participar!'),node('div','quiz-result-number',score+' / '+data.quiz.length),node('p','',score===data.quiz.length?'Excelente! Você acertou todas as perguntas.':'Você pode consultar os conteúdos acima e tentar novamente.'));const div=node('div','quiz-action'),btn=node('button','','Refazer questionário');btn.type='button';btn.addEventListener('click',()=>{qIndex=0;score=0;selected=-1;drawQuiz()});div.appendChild(btn);quizRoot.appendChild(div);quizRoot.appendChild(node('p','quiz-footnote','Nenhuma resposta é enviada ou armazenada.'));return}
+const q=data.quiz[qIndex];add(quizRoot,node('div','quiz-progress',`PERGUNTA ${qIndex+1} DE ${data.quiz.length}`),node('h3','',q.question));const choices=node('div','quiz-choices');q.choices.forEach((c,i)=>{const b=node('button','quiz-choice',c);b.type='button';if(selected!==-1){b.disabled=true;if(i===q.answer)b.classList.add('correct');else if(i===selected)b.classList.add('incorrect')}b.addEventListener('click',()=>{if(selected!==-1)return;selected=i;if(i===q.answer)score++;drawQuiz()});choices.appendChild(b)});quizRoot.appendChild(choices);if(selected!==-1){quizRoot.appendChild(node('div','quiz-explanation',q.explanation));const actions=node('div','quiz-action'),b=node('button','',qIndex+1===data.quiz.length?'Ver resultado':'Próxima pergunta →');b.type='button';b.addEventListener('click',()=>{qIndex++;selected=-1;drawQuiz()});actions.appendChild(b);quizRoot.appendChild(actions)}}drawQuiz();
+text('sources-eyebrow',data.sourceIntro.eyebrow);text('sources-title',data.sourceIntro.title);text('sources-text',data.sourceIntro.text);
+for(const s of data.sources){const a=node('a','source-card');a.href=linkValid(s.url);a.target='_blank';a.rel='noopener noreferrer';a.title='Abrir fonte oficial em nova aba';const body=node('div','');add(body,node('strong','',s.name),node('p','',s.description));add(a,body,node('span','arrow','↗'));$('sources-grid').appendChild(a)}
+const menu=$('menu-button'),links=$('nav-links');menu.addEventListener('click',()=>{const show=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(show))});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+})();
+</script>
+</body>
+</html>
